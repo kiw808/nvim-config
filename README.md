@@ -10,6 +10,7 @@
 - bufferline
 - nvim-tree
 - nvim-web-devicons
+- which-key
 
 ## Requirements
 
