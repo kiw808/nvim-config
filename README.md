@@ -12,6 +12,8 @@
 - nvim-web-devicons
 - which-key
 - telescope
+- LSP-config
+- nvim-cmp
 
 ## Requirements
 
