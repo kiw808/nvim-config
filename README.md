@@ -11,6 +11,7 @@
 - nvim-tree
 - nvim-web-devicons
 - which-key
+- telescope
 
 ## Requirements
 
