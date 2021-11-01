@@ -10,6 +10,7 @@ require('autopairs-config')
 require('nvimtree-config')
 require('treesitter-config')
 require('whichkey-config')
+require('telescope-config')
 
 -- Colorscheme
 vim.cmd('colorscheme onedark')
