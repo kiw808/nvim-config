@@ -17,3 +17,4 @@
 
 - Neovim >= 0.5
 - Packer plugin manager
+- ripgrep
