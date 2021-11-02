@@ -29,30 +29,25 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-  buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
+--  buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 
 end
 
--- HTML
-nvim_lsp.html.setup {
-  on_attach = on_attach,
-  capabilities = capabilities
+local langservers = {
+  "html",
+  "cssls",
+  "tsserver",
+  "graphql"
 }
 
--- CSS
-nvim_lsp.cssls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
+for _, server in ipairs(langservers) do
+  require'lspconfig'[server].setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+  }
+end
 
--- Typescript
-nvim_lsp.tsserver.setup{
-  on_attach = on_attach,
-  capabilities = capabilities
-}
-
--- Rescript
-nvim_lsp.rescriptls.setup{
+nvim_lsp.rescriptls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
   cmd = {
@@ -60,11 +55,5 @@ nvim_lsp.rescriptls.setup{
     '/home/pierremu/.local/share/nvim/site/pack/packer/start/vim-rescript/server/out/server.js',
     '--stdio'
   },
-  filetypes = { "rescript" },
-}
-
--- GraphQl
-nvim_lsp.graphql.setup{
-  on_attach = on_attach,
-  capabilities = capabilities
+  filetypes = { "rescript" },bilities = capabilities,
 }

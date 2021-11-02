@@ -16,6 +16,10 @@ local mappings = {
     e = {'<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', "Show line diagnostics"},
     q = {'<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', "Show loclist"}
   },
+  R = {
+    name = "Rescript",
+    f = {":RescriptFormat<CR>", "Format current file"},
+  },
 }
 local opts = {prefix = '<leader>'}
 
