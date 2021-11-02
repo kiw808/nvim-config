@@ -11,6 +11,7 @@ return require('packer').startup(function()
   use 'windwp/nvim-ts-autotag'
   use 'p00f/nvim-ts-rainbow'
   use 'windwp/nvim-autopairs'
+  use 'lukas-reineke/indent-blankline.nvim'
   use {
     'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
