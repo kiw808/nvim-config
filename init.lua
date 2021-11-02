@@ -12,7 +12,6 @@ require('treesitter-config')
 require('whichkey-config')
 require('telescope-config')
 require('lsp-config')
--- require('cmp-config')
 
 -- Colorscheme
 vim.cmd('colorscheme onedark')
