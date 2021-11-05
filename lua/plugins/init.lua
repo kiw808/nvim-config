@@ -43,5 +43,7 @@ return require('packer').startup(function()
   use 'onsails/lspkind-nvim'
   use 'rescript-lang/vim-rescript'
   use 'nkrkv/nvim-treesitter-rescript'
+  use 'FotiadisM/tabset.nvim'
+  use { 'tami5/lspsaga.nvim', branch = 'nvim51' }
 
 end)

@@ -3,6 +3,9 @@ require('plugins')
 require('options')
 require('keybindings')
 
+-- Colorscheme
+vim.cmd('colorscheme onedark')
+
 -- Plugin configs
 require('lualine-config')
 require('bufferline-config')
@@ -13,6 +16,5 @@ require('treesitter-config')
 require('whichkey-config')
 require('telescope-config')
 require('lsp-config')
-
--- Colorscheme
-vim.cmd('colorscheme onedark')
+require('tabset-config')
+require('lspsaga-config')
