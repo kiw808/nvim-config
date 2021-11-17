@@ -14,9 +14,13 @@
 - telescope
 - LSP-config
 - nvim-cmp
+- lsp-saga
+- null-ls
+- gitsigns
 
 ## Requirements
 
 - Neovim >= 0.5
 - Packer plugin manager
 - ripgrep
+- prettier

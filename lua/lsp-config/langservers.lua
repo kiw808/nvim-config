@@ -8,6 +8,11 @@ local on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
   buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
+  -- disable tsserver formatting
+  client.resolved_capabilities.document_formatting = false
+
+  vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
+
   -- Mappings.
   local map = vim.api.nvim_buf_set_keymap
   map(0, "n", "gr", "<cmd>Lspsaga rename<cr>", {silent = true, noremap = true})
@@ -51,5 +56,3 @@ for _, server in ipairs(langservers) do
     }
   end
 end
-
-

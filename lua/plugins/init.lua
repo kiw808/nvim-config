@@ -45,5 +45,15 @@ return require('packer').startup(function()
   use 'nkrkv/nvim-treesitter-rescript'
   use 'FotiadisM/tabset.nvim'
   use { 'tami5/lspsaga.nvim', branch = 'nvim51' }
+  use {
+    'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+  }
+  use({
+    "jose-elias-alvarez/null-ls.nvim",
+    requires = {"nvim-lua/plenary.nvim", "neovim/nvim-lspconfig"}
+  })
 
 end)
