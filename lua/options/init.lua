@@ -2,6 +2,7 @@ local cmd = vim.cmd
 local o = vim.o
 local wo = vim.wo
 local bo = vim.bo
+local go = vim.go
 
 cmd('filetype plugin indent on')
 
@@ -28,7 +29,7 @@ o.sidescrolloff = 5
 o.mouse = "a"
 wo.wrap = false
 wo.number = true
-wo.relativenumber = true
+wo.relativenumber = false
 o.cursorline = true
 wo.signcolumn = "yes"
 o.tabstop = 2
