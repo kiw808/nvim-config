@@ -18,7 +18,9 @@ return {
 		pickers = {
 			find_files = {
 				theme = "ivy",
-				hidden = true,
+			},
+			live_grep = {
+				theme = "ivy",
 			},
 			buffers = {
 				theme = "dropdown",
