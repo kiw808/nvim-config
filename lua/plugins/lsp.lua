@@ -83,4 +83,10 @@ return {
 			})
 		end,
 	},
+
+	-- Kitty conf integration
+	{
+		"fladson/vim-kitty",
+		ft = "kitty",
+	},
 }

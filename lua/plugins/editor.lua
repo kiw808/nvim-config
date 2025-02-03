@@ -78,8 +78,4 @@ return {
 		---@type ibl.config
 		opts = {},
 	},
-	{
-		"fladson/vim-kitty",
-		ft = "kitty",
-	},
 }
