@@ -56,16 +56,6 @@ return {
 		version = "*",
 		opts = {},
 	},
-	-- {
-	--   "echasnovski/mini.indentscope",
-	--   version = "*",
-	--   opts = {
-	--     animation = function()
-	--       require("mini.indentscop").gen_animation.none()
-	--     end,
-	--     try_as_border = true,
-	--   },
-	-- },
 	{
 		"echasnovski/mini.cursorword",
 		version = "*",
