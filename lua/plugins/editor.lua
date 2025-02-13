@@ -1,10 +1,13 @@
 return {
+	--# Pairs
 	{
 		"echasnovski/mini.pairs",
 		version = "*",
 		event = "BufEnter",
 		opts = {},
 	},
+
+	--# Rainbow delimiters
 	{
 		"hiphish/rainbow-delimiters.nvim",
 		opts = {},
@@ -39,28 +42,50 @@ return {
 			hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
 		end,
 	},
+
+	--# Icons
+	{
+		"echasnovski/mini.icons",
+		init = function()
+			package.preload["nvim-web-devicons"] = function()
+				require("mini.icons").mock_nvim_web_devicons()
+				return package.loaded["nvim-web-devicons"]
+			end
+		end,
+		opts = {},
+	},
+
+	--# Statusline
 	{
 		"echasnovski/mini.statusline",
 		dependencies = { { "echasnovski/mini.icons", opts = {} } },
 		version = "*",
 		opts = {},
 	},
+
+	--# Tabline
 	{
 		"echasnovski/mini.tabline",
 		dependencies = { { "echasnovski/mini.icons", opts = {} } },
 		version = "*",
 		opts = {},
 	},
+
+	--# Surround
 	{
 		"echasnovski/mini.surround",
 		version = "*",
 		opts = {},
 	},
+
+	--# Cursorword
 	{
 		"echasnovski/mini.cursorword",
 		version = "*",
 		opts = {},
 	},
+
+	--# Indent lines
 	{
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
@@ -68,4 +93,19 @@ return {
 		---@type ibl.config
 		opts = {},
 	},
+
+	--# Markdown viewer
+	{
+		"OXY2DEV/markview.nvim",
+		ft = { "markdown" },
+	},
+	-- {
+	-- 	"MeanderingProgrammer/render-markdown.nvim",
+	-- 	-- dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.nvim" }, -- if you use the mini.nvim suite
+	-- 	dependencies = { "nvim-treesitter/nvim-treesitter", "echasnovski/mini.icons" }, -- if you use standalone mini plugins
+	-- 	-- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+	-- 	---@module 'render-markdown'
+	-- 	---@type render.md.UserConfig
+	-- 	opts = {},
+	-- },
 }

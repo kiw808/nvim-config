@@ -18,6 +18,17 @@ return {
 		"williamboman/mason.nvim",
 	},
 	event = { "BufWritePre" },
+	cmd = { "ConformInfo" },
+	keys = {
+		{
+			"<leader>f",
+			function()
+				require("conform").format()
+			end,
+			mode = "",
+			desc = "Format buffer",
+		},
+	},
 	opts = {
 		formatters_by_ft = {
 			lua = { "stylua" },
