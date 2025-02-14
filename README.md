@@ -33,6 +33,12 @@ Hoping it will be useful :)
 - [telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [neotree](https://github.com/nvim-neo-tree/neo-tree.nvim)
 
+### Database
+
+- [vim-dadbod](https://github.com/tpope/vim-dadbod)
+- [vim-dadbod-ui](https://github.com/kristijanhusak/vim-dadbod-ui)
+- [vim-dadbod-completion](https://github.com/kristijanhusak/vim-dadbod-completion)
+
 ### Git
 
 - [vim-fugitive](https://github.com/folke/lazy.nvim)

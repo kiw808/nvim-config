@@ -17,5 +17,11 @@ return {
 				auto_show_delay_ms = 500,
 			},
 		},
+		sources = {
+			default = { "lsp", "path", "snippets", "buffer", "dadbod" },
+			providers = {
+				dadbod = { name = "Dadbod", module = "vim_dadbod_completion.blink" },
+			},
+		},
 	},
 }
