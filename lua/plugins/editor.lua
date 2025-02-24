@@ -44,21 +44,25 @@ return {
 	},
 
 	--# Icons
-	{
-		"echasnovski/mini.icons",
-		init = function()
-			package.preload["nvim-web-devicons"] = function()
-				require("mini.icons").mock_nvim_web_devicons()
-				return package.loaded["nvim-web-devicons"]
-			end
-		end,
-		opts = {},
-	},
+	{ "nvim-tree/nvim-web-devicons", opts = {} },
+	-- {
+	-- 	"echasnovski/mini.icons",
+	-- 	init = function()
+	-- 		package.preload["nvim-web-devicons"] = function()
+	-- 			require("mini.icons").mock_nvim_web_devicons()
+	-- 			return package.loaded["nvim-web-devicons"]
+	-- 		end
+	-- 	end,
+	-- 	opts = {},
+	-- },
 
 	--# Statusline
 	{
 		"echasnovski/mini.statusline",
-		dependencies = { { "echasnovski/mini.icons", opts = {} } },
+		dependencies = {
+			-- { "echasnovski/mini.icons", opts = {} },
+			{ "nvim-tree/nvim-web-devicons", opts = {} },
+		},
 		version = "*",
 		opts = {},
 	},
@@ -66,7 +70,10 @@ return {
 	--# Tabline
 	{
 		"echasnovski/mini.tabline",
-		dependencies = { { "echasnovski/mini.icons", opts = {} } },
+		dependencies = {
+			-- { "echasnovski/mini.icons", opts = {} },
+			{ "nvim-tree/nvim-web-devicons", opts = {} },
+		},
 		version = "*",
 		opts = {},
 	},
