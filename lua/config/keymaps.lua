@@ -26,3 +26,12 @@ map("n", "<leader>bx", "<cmd>bdelete<CR>", { desc = "Delete current buffer" })
 -- Stay in indent mode
 map("v", "<", "<gv", {})
 map("v", ">", ">gv", {})
+
+--# Small terminal
+map("n", "<leader>st", function()
+	vim.cmd.new()
+	vim.cmd.term()
+	vim.cmd.wincmd("J")
+	vim.api.nvim_win_set_height(0, 15)
+end, {})
+map("t", "<esc>", "<C-\\><C-n>", {})

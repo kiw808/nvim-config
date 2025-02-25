@@ -16,3 +16,14 @@ vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave" }, {
 		lint.try_lint()
 	end,
 })
+
+--# Terminal
+vim.api.nvim_create_autocmd({ "TermOpen", "WinEnter" }, {
+	group = vim.api.nvim_create_augroup("custom-term-open", { clear = true }),
+	pattern = { "term://*" },
+	callback = function()
+		vim.opt.number = false
+		vim.opt.relativenumber = false
+		vim.cmd.startinsert()
+	end,
+})
