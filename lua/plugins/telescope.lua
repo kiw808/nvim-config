@@ -9,6 +9,7 @@ return {
 	},
 	keys = {
 		{ "<leader>ff", require("telescope.builtin").find_files, desc = "Telescope find files" },
+		{ "<leader>ffh", "<cmd>Telescope find_files hidden=true<cr>", desc = "Telescope find hidden files" },
 		{ "<leader>fg", require("telescope.builtin").live_grep, desc = "Telescope live grep" },
 		{ "<leader>fh", require("telescope.builtin").help_tags, desc = "Telescope help tags" },
 		{ "<leader>b", require("telescope.builtin").buffers, desc = "Telescope buffers" },

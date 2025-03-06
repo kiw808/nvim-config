@@ -24,8 +24,8 @@ map("n", "<leader>bp", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
 map("n", "<leader>bx", "<cmd>bdelete<CR>", { desc = "Delete current buffer" })
 
 -- Stay in indent mode
-map("v", "<", "<gv", {})
-map("v", ">", ">gv", {})
+map("v", "<", "<gv", { desc = "Indent backwards" })
+map("v", ">", ">gv", { desc = "Indent forward" })
 
 --# Small terminal
 map("n", "<leader>st", function()
@@ -33,5 +33,5 @@ map("n", "<leader>st", function()
 	vim.cmd.term()
 	vim.cmd.wincmd("J")
 	vim.api.nvim_win_set_height(0, 15)
-end, {})
-map("t", "<esc>", "<C-\\><C-n>", {})
+end, { desc = "Open small terminal" })
+map("t", "<esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
