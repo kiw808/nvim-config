@@ -24,8 +24,14 @@ return {
 			"MunifTanjim/nui.nvim",
 			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 		},
+		lazy = false,
 		keys = {
-			{ "<leader>e", "<cmd>Neotree toggle reveal_force_cwd<cr>" },
+			{ "<leader>e", "<cmd>Neotree toggle reveal_force_cwd<cr>", { desc = "Neo-tree toggle" } },
+		},
+		opts = {
+			filesystem = {
+				hijack_netrw_behavior = "open_current",
+			},
 		},
 	},
 }
